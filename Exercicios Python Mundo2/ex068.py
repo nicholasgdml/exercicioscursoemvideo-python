@@ -5,29 +5,32 @@ print('-'*22)
 print('Jogo do IMPAR ou PAR')
 print('-'*22)
 contador = 0
+escolha = ' '
 while True:
     print('Quantos dedos quer jogar?')
     ndedos = int(input('> '))
-    print('Escolhe impar ou par? [i, p]')
-    escolha = str(input('> ')).upper().strip()
-    computador = randint(1, 10)
-    total = ndedos + computador
-    if escolha == 'P':
-        print(f'Você jogou {ndedos} e o computador jogou {computador}')
-        if total % 2 == 0:
-            print(f'O total foi {total}, deu PAR')
-            print('Jogadar Venceu!')
-        else:
-            print(f'O total foi {total}, deu IMPAR')
-            print('Jogador Perdeu!')
-            break
-    elif escolha == 'I':
-        if total % 2 == 1:
-            print(f'O total foi {total}, deu IMPAR')
-            print('Jogador Venceu!')
-        else:
-            print(f'O total foi {total}, deu PAR')
-            print('Jogador Perdeu!')
-            break
+    while escolha not in 'PI':
+        print('Escolhe impar ou par? [i, p]')
+        escolha = str(input('> ')).upper().strip()[0]
+        computador = randint(1, 10)
+        total = ndedos + computador
+        if escolha == 'P':
+            print(f'Você jogou {ndedos} e o computador jogou {computador}')
+            if total % 2 == 0:
+                print(f'O total foi {total}, deu PAR')
+                print('Jogadar Venceu!')
+            else:
+                print(f'O total foi {total}, deu IMPAR')
+                print('Jogador Perdeu!')
+                break
+        elif escolha == 'I':
+            if total % 2 == 1:
+                print(f'O total foi {total}, deu IMPAR')
+                print('Jogador Venceu!')
+            else:
+                print(f'O total foi {total}, deu PAR')
+                print('Jogador Perdeu!')
+                break
     contador += 1
+    print('Vamos jogar novamente')
 print(f'Fim do jogo! O jogador venceu {contador} vezes sequidas!')
