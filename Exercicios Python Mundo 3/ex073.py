@@ -4,6 +4,23 @@ b) Os últimos 4 colocados.
 c) Times em ordem alfabética.
 d) Em que posição está o time da Chapecoense.
 '''
-
+def linha():
+    print('-'*100)
 	
-times = 'Palmeiras', 'Atlético-MG', 'Fortaleza', 'Bragantino', 'Athletico-PR', 'Flamengo', 'Ceará', 'Atlético-GO', 'Bahia', 'Corinthians', 'Fluminense', 'Santos', 'Juventude', 'Internacion, 'Cuiabá', 'Sport', 'São Paulo', 'América-MG', 'Grêmio', 'Chapecoense'
+times = ('Palmeiras', 'Atlético-MG', 'Fortaleza', 'Bragantino', 'Athletico-PR', 'Flamengo', 'Ceará', 'Atlético-GO', 'Bahia', 'Corinthians', 'Fluminense', 'Santos', 'Juventude', 'Internacional', 'Cuiabá', 'Sport', 'São Paulo', 'América-MG', 'Grêmio', 'Chapecoense')
+linha()
+print('Os cinco primeiros times são:')
+for c in range(0, 5):
+    print(f'O {times[c]} que está na {c+1}ª posição!')
+linha()
+
+print('Os 4 últimos times são:')
+print(times[16:])
+linha()
+
+print('Time em ordem alfabética:')
+print(sorted(times))
+linha()
+
+print(f'O Chapecoense está na posição {times.index("Chapecoense") + 1}ª posição! ')
+linha()
