@@ -27,7 +27,7 @@ for pos in range(0, len(produtos)):
     if pos % 2 == 0:
         print(f'{produtos[pos]:•<23}', end='')
     else:
-        print(f'R${produtos[pos]}')
+        print(f'R${produtos[pos]:>7.2f}')
 
 # Linha para finalizar
 
