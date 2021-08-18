@@ -17,9 +17,9 @@ produtos = ('Lápis', 1.75,
 
 # Titulo
 
-print('=' * 30)
-print(f'{"Tabela de preços":^30}')
-print('=' * 30)
+print('=' * 34)
+print(f'{"Tabela de preços":^34}')
+print('=' * 34)
 
 # looping for que ultiliza impar e par para encontrar o preço e nome do produto
 
@@ -31,4 +31,4 @@ for pos in range(0, len(produtos)):
 
 # Linha para finalizar
 
-print('=' * 30)
+print('=' * 34)
