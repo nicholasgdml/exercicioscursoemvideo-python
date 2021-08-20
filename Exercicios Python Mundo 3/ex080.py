@@ -4,10 +4,12 @@ já na posição correta de inserção (sem usar o sort()). No final, mostre a l
 lista = []
 for c in range (5):
     num = int(input('Digite um número: '))
-    for pos, valor in range(enumerate(lista)):
-        if num < valor:
-            lista.insert(pos, num)
-            break
-        else:
-            lista.append(num)
+    if c == 0 or num > lista[-1]:
+        lista.append(num)
+    else:
+        pos = 0
+        while pos < len[lista]:
+            if num < lista[pos]:
+                lista.insert(pos, num)
+            pos += 1
 print(lista)
