@@ -8,7 +8,7 @@ jogador['nome'] = str(input('Nome do jogador: '))
 partidas = int(input(f'Quantas partidas {jogador["nome"]} jogou?: '))
 for c in range(0, partidas):
     gols.append(int(input(f' Quantos gols na partida {c}?: ')))
-jogador['gols'] = gols
+jogador['gols'] = gols[:]
 jogador['total'] = sum(gols)
 print('=-' * 24)
 print(jogador)
@@ -19,4 +19,4 @@ print('=-' * 24)
 print(f'O {jogador["nome"]} jogou {partidas} partidas.')
 for k, v in enumerate(jogador['gols']):
     print(f'    -> Na partida {k}, fez {v} gols.')
-print(f'Foi um total de {jogador["total"]}')
+print(f'Foi um total de {jogador["total"]}')    
